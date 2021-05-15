@@ -14,6 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 
 #for running the Layer 3 cpp executable file
 import subprocess
+import os
 #
 #For sending the result of current layer to next layer i am using firebase real time database
 from firebase import Firebase
@@ -89,6 +90,7 @@ def sendResToNextLayer(res):
 
     obj = firebase.database().child("cppCodeOutput").get().val()
     print("res of NLP Layer : ", res)
+    print(os.getcwd())
 
     s = ""
     for entity in res.keys():
@@ -101,7 +103,7 @@ def sendResToNextLayer(res):
     s += "\n"+"end"
    
     ## Shell=False helps the process terminate
-    path = "./layer3"
+    path = "layer3.exe"
     process = subprocess.Popen(path, shell=False, encoding='utf8', stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     ## Get exit codes
     out, err = process.communicate(s)
