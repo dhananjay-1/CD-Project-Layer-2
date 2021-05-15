@@ -1,0 +1,380 @@
+version: "2.0"
+
+nlu:
+
+- intent: variable_creation_1
+  examples: |
+    - make an [integer](dataType) variable [x12](variableName)
+    - make a [character](dataType) variable [_c](variableName)
+    - make a [float](dataType) variable [f_1](variableName)
+    - make a [double](dataType) variable [ab_c12](variableName)
+    - make a [boolean](dataType) variable [_b12](variableName)
+    - make [string](dataType) variable [sjfaks](variableName)
+    - make [char](dataType) variable [pqrs](variableName)
+    - make [float](dataType) variable [m](variableName)
+    - make [double](dataType) variable [n](variableName)
+    - make [bool](dataType) variable [y](variableName)
+    - make an [integer](dataType) variable [a](variableName)
+    - make a [character](dataType) variable [b](variableName)
+    - make a [float](dataType) variable [c](variableName)
+    - make a [double](dataType) variable [d](variableName)
+    - make a [boolean](dataType) variable [e](variableName)
+    - make [int](dataType) variable [f](variableName)
+    - make [char](dataType) variable [g](variableName)
+    - make [float](dataType) variable [h](variableName)
+    - make [double](dataType) variable [i](variableName)
+    - make [bool](dataType) variable [j](variableName)
+    - make an [integer](dataType) variable [k](variableName)
+    - make a [character](dataType) variable [l](variableName)
+    - make a [float](dataType) variable [m](variableName)
+    - make a [double](dataType) variable [n](variableName)
+    - make a [boolean](dataType) variable [o](variableName)
+    - make [int](dataType) variable [p](variableName)
+    - make [char](dataType) variable [q](variableName)
+    - make [float](dataType) variable [r](variableName)
+    - make [double](dataType) variable [s](variableName)
+    - make [bool](dataType) variable [t](variableName)
+    - make an [integer](dataType) variable [u](variableName)
+    - make a [character](dataType) variable [v](variableName)
+    - make a [float](dataType) variable [w](variableName)
+    - make a [double](dataType) variable [x](variableName)
+    - make a [boolean](dataType) variable [y](variableName)
+    - make [int](dataType) variable [z](variableName)
+    - make [char](dataType) variable [pqrs](variableName)
+    - make [float](dataType) variable [m](variableName)
+    - make [double](dataType) variable [n](variableName)
+    - make [bool](dataType) variable [y](variableName)
+
+- intent: assignment_operation
+  examples: |
+    - Assign [10](value) to [res](variableName)
+    - Store [3.56](value) in [f1](variableName)
+    - Store [0](value) in [b1](variableName)
+    - Assign [10](value) to [res](variableName)
+    - Store [3.56](value) in [f1](variableName)
+    - Store [1](value) in [b1](variableName)
+    - Assign [101.1929](value) to [res](variableName)
+    - Store [2939132](value) in [f1](variableName)
+    - Store [12370129.219271](value) in [b1](variableName)
+    - Assign [121.2312](value) to [res](variableName)
+    - Store [3273](value) in [f1](variableName)
+    - Store [a](value) in [b1](variableName)
+    - Assign [b](value) to [res](variableName)
+    - Store [c](value) in [f1](variableName)
+    - Store [g](value) in [b1](variableName)
+    - Assign [d](value) to [res](variableName)
+    - Store [e](value) in [f1](variableName)
+    - Store [f](value) in [b1](variableName)
+    - Store [h](value) in [b1](variableName)
+    - Assign [i](value) to [res](variableName)
+    - Store [j](value) in [f1](variableName)
+    - Store [k](value) in [b1](variableName)
+    - Assign [l](value) to [res](variableName)
+    - Store [m](value) in [f1](variableName)
+    - Store [n](value) in [b1](variableName)
+    - Store [o](value) in [b1](variableName)
+    - Assign [p](value) to [res](variableName)
+    - Store [q](value) in [f1](variableName)
+    - Store [r](value) in [b1](variableName)
+    - Assign [s](value) to [res](variableName)
+    - Store [t](value) in [f1](variableName)
+    - Store [u](value) in [b1](variableName)
+    - Store [v](value) in [b1](variableName)
+    - Assign [w](value) to [res](variableName)
+    - Store [x](value) in [f1](variableName)
+    - Store [y](value) in [b1](variableName)
+    - Assign [z](value) to [res](variableName)
+    - Store [a](value) in [f1](variableName)
+    - Store [a](value) in [b1](variableName)
+
+- intent: arithmetic_operation
+  examples: |
+    - Store [sum](operation) of [x1]{"entity":"variableName", "role":"operand1"} and [y]{"entity":"variableName", "role":"operand2"} in [res]{"entity":"variableName", "role":"result"}
+    - Store [difference](operation) of [abc_12]{"entity":"variableName", "role":"operand1"} and [b]{"entity":"variableName", "role":"operand2"} in [x]{"entity":"variableName", "role":"result"}
+    - Store [product](operation) of [p12_ad]{"entity":"variableName", "role":"operand1"} and [q]{"entity":"variableName", "role":"operand2"} in [p]{"entity":"variableName", "role":"result"}
+    - Store [division](operation) of [a98_a]{"entity":"variableName", "role":"operand1"} and [z]{"entity":"variableName", "role":"operand2"} in [z]{"entity":"variableName", "role":"result"}
+    - Store [modulo](operation) of [p09]{"entity":"variableName", "role":"operand1"} and [a]{"entity":"variableName", "role":"operand2"} in [a]{"entity":"variableName", "role":"result"}
+    - Store [p1]{"entity":"variableName", "role":"operand1"} [plus](operation) [a]{"entity":"variableName", "role":"operand2"} in [a]{"entity":"variableName", "role":"result"}
+    - Store [q0]{"entity":"variableName", "role":"operand1"} [minus](operation) [b]{"entity":"variableName", "role":"operand2"} in [b]{"entity":"variableName", "role":"result"}
+    - Store [a]{"entity":"variableName", "role":"operand1"} [into](operation) [c]{"entity":"variableName", "role":"operand2"} in [c]{"entity":"variableName", "role":"result"}
+    - Store [b]{"entity":"variableName", "role":"operand1"} [by](operation) [d]{"entity":"variableName", "role":"operand2"} in [d]{"entity":"variableName", "role":"result"}
+    - Store [c]{"entity":"variableName", "role":"operand1"} [modulo](operation) [e]{"entity":"variableName", "role":"operand2"} in [e]{"entity":"variableName", "role":"result"}
+    - Store [sum](operation) of [u]{"entity":"variableName", "role":"operand1"} and [j]{"entity":"variableName", "role":"operand2"} in [f]{"entity":"variableName", "role":"result"}
+    - Store [difference](operation) of [v]{"entity":"variableName", "role":"operand1"} and [k]{"entity":"variableName", "role":"operand2"} in [g]{"entity":"variableName", "role":"result"}
+    - Store [product](operation) of [w]{"entity":"variableName", "role":"operand1"} and [l1]{"entity":"variableName", "role":"operand2"} in [h]{"entity":"variableName", "role":"result"}
+    - Store [division](operation) of [x]{"entity":"variableName", "role":"operand1"} and [m2]{"entity":"variableName", "role":"operand2"} in [z]{"entity":"variableName", "role":"result"}
+    - Store [modulo](operation) of [y]{"entity":"variableName", "role":"operand1"} and [n]{"entity":"variableName", "role":"operand2"} in [i]{"entity":"variableName", "role":"result"}
+    - Store [d]{"entity":"variableName", "role":"operand1"} [plus](operation) [o12]{"entity":"variableName", "role":"operand2"} in [j]{"entity":"variableName", "role":"result"}
+    - Store [e]{"entity":"variableName", "role":"operand1"} [minus](operation) [p34]{"entity":"variableName", "role":"operand2"} in [k]{"entity":"variableName", "role":"result"}
+    - Store [f]{"entity":"variableName", "role":"operand1"} [into](operation) [f0]{"entity":"variableName", "role":"operand2"} in [l]{"entity":"variableName", "role":"result"}
+    - Store [g]{"entity":"variableName", "role":"operand1"} [by](operation) [g1]{"entity":"variableName", "role":"operand2"} in [m]{"entity":"variableName", "role":"result"}
+    - Store [h]{"entity":"variableName", "role":"operand1"} [modulo](operation) [h]{"entity":"variableName", "role":"operand2"} in [n]{"entity":"variableName", "role":"result"}
+    - Store [sum](operation) of [a]{"entity":"variableName", "role":"operand1"} and [y]{"entity":"variableName", "role":"operand2"} in [res]{"entity":"variableName", "role":"result"}
+    - Store [difference](operation) of [b]{"entity":"variableName", "role":"operand1"} and [b]{"entity":"variableName", "role":"operand2"} in [x]{"entity":"variableName", "role":"result"}
+    - Store [product](operation) of [c]{"entity":"variableName", "role":"operand1"} and [q]{"entity":"variableName", "role":"operand2"} in [p]{"entity":"variableName", "role":"result"}
+    - Store [division](operation) of [d]{"entity":"variableName", "role":"operand1"} and [z]{"entity":"variableName", "role":"operand2"} in [z]{"entity":"variableName", "role":"result"}
+    - Store [modulo](operation) of [p09]{"entity":"variableName", "role":"operand1"} and [a]{"entity":"variableName", "role":"operand2"} in [a]{"entity":"variableName", "role":"result"}
+    - Store [i]{"entity":"variableName", "role":"operand1"} [plus](operation) [a]{"entity":"variableName", "role":"operand2"} in [a]{"entity":"variableName", "role":"result"}
+    - Store [j]{"entity":"variableName", "role":"operand1"} [minus](operation) [b]{"entity":"variableName", "role":"operand2"} in [b]{"entity":"variableName", "role":"result"}
+    - Store [k]{"entity":"variableName", "role":"operand1"} [into](operation) [c]{"entity":"variableName", "role":"operand2"} in [c]{"entity":"variableName", "role":"result"}
+    - Store [l]{"entity":"variableName", "role":"operand1"} [by](operation) [d]{"entity":"variableName", "role":"operand2"} in [d]{"entity":"variableName", "role":"result"}
+    - Store [m]{"entity":"variableName", "role":"operand1"} [modulo](operation) [e]{"entity":"variableName", "role":"operand2"} in [e]{"entity":"variableName", "role":"result"}
+    - Store [sum](operation) of [e]{"entity":"variableName", "role":"operand1"} and [j]{"entity":"variableName", "role":"operand2"} in [f]{"entity":"variableName", "role":"result"}
+    - Store [difference](operation) of [f]{"entity":"variableName", "role":"operand1"} and [k]{"entity":"variableName", "role":"operand2"} in [g]{"entity":"variableName", "role":"result"}
+    - Store [product](operation) of [g]{"entity":"variableName", "role":"operand1"} and [l1]{"entity":"variableName", "role":"operand2"} in [h]{"entity":"variableName", "role":"result"}
+    - Store [division](operation) of [h]{"entity":"variableName", "role":"operand1"} and [m2]{"entity":"variableName", "role":"operand2"} in [z]{"entity":"variableName", "role":"result"}
+    - Store [modulo](operation) of [i]{"entity":"variableName", "role":"operand1"} and [n]{"entity":"variableName", "role":"operand2"} in [i]{"entity":"variableName", "role":"result"}
+    - Store [n]{"entity":"variableName", "role":"operand1"} [plus](operation) [o12]{"entity":"variableName", "role":"operand2"} in [j]{"entity":"variableName", "role":"result"}
+    - Store [o]{"entity":"variableName", "role":"operand1"} [minus](operation) [p34]{"entity":"variableName", "role":"operand2"} in [k]{"entity":"variableName", "role":"result"}
+    - Store [p]{"entity":"variableName", "role":"operand1"} [into](operation) [f0]{"entity":"variableName", "role":"operand2"} in [l]{"entity":"variableName", "role":"result"}
+    - Store [q]{"entity":"variableName", "role":"operand1"} [by](operation) [g1]{"entity":"variableName", "role":"operand2"} in [m]{"entity":"variableName", "role":"result"}
+    - Store [r]{"entity":"variableName", "role":"operand1"} [modulo](operation) [h]{"entity":"variableName", "role":"operand2"} in [n]{"entity":"variableName", "role":"result"}
+    - Store [s]{"entity":"variableName", "role":"operand1"} [plus](operation) [o12]{"entity":"variableName", "role":"operand2"} in [j]{"entity":"variableName", "role":"result"}
+    - Store [t]{"entity":"variableName", "role":"operand1"} [minus](operation) [p34]{"entity":"variableName", "role":"operand2"} in [k]{"entity":"variableName", "role":"result"}
+    - Store [u]{"entity":"variableName", "role":"operand1"} [into](operation) [f0]{"entity":"variableName", "role":"operand2"} in [l]{"entity":"variableName", "role":"result"}
+    - Store [v]{"entity":"variableName", "role":"operand1"} [by](operation) [g1]{"entity":"variableName", "role":"operand2"} in [m]{"entity":"variableName", "role":"result"}
+    - Store [w]{"entity":"variableName", "role":"operand1"} [modulo](operation) [z]{"entity":"variableName", "role":"operand2"} in [n]{"entity":"variableName", "role":"result"}
+    - Store [x]{"entity":"variableName", "role":"operand1"} [plus](operation) [y]{"entity":"variableName", "role":"operand2"} in [j]{"entity":"variableName", "role":"result"}
+    - Store [y]{"entity":"variableName", "role":"operand1"} [minus](operation) [x]{"entity":"variableName", "role":"operand2"} in [k]{"entity":"variableName", "role":"result"}
+    - Store [z]{"entity":"variableName", "role":"operand1"} [into](operation) [w]{"entity":"variableName", "role":"operand2"} in [l]{"entity":"variableName", "role":"result"}
+    - Store [a1]{"entity":"variableName", "role":"operand1"} [by](operation) [v]{"entity":"variableName", "role":"operand2"} in [m]{"entity":"variableName", "role":"result"}
+    - Store [b1]{"entity":"variableName", "role":"operand1"} [modulo](operation) [u]{"entity":"variableName", "role":"operand2"} in [n]{"entity":"variableName", "role":"result"}
+    - Store [sum](operation) of [j]{"entity":"variableName", "role":"operand1"} and [t]{"entity":"variableName", "role":"operand2"} in [f]{"entity":"variableName", "role":"result"}
+    - Store [difference](operation) of [k]{"entity":"variableName", "role":"operand1"} and [s]{"entity":"variableName", "role":"operand2"} in [g]{"entity":"variableName", "role":"result"}
+    - Store [product](operation) of [l]{"entity":"variableName", "role":"operand1"} and [r]{"entity":"variableName", "role":"operand2"} in [h]{"entity":"variableName", "role":"result"}
+    - Store [division](operation) of [m]{"entity":"variableName", "role":"operand1"} and [q]{"entity":"variableName", "role":"operand2"} in [z]{"entity":"variableName", "role":"result"}
+    - Store [modulo](operation) of [n]{"entity":"variableName", "role":"operand1"} and [p]{"entity":"variableName", "role":"operand2"} in [i]{"entity":"variableName", "role":"result"}
+    - Store [sum](operation) of [o]{"entity":"variableName", "role":"operand1"} and [o]{"entity":"variableName", "role":"operand2"} in [f]{"entity":"variableName", "role":"result"}
+    - Store [difference](operation) of [p]{"entity":"variableName", "role":"operand1"} and [n]{"entity":"variableName", "role":"operand2"} in [g]{"entity":"variableName", "role":"result"}
+    - Store [product](operation) of [q]{"entity":"variableName", "role":"operand1"} and [m]{"entity":"variableName", "role":"operand2"} in [h]{"entity":"variableName", "role":"result"}
+    - Store [division](operation) of [r]{"entity":"variableName", "role":"operand1"} and [l]{"entity":"variableName", "role":"operand2"} in [z]{"entity":"variableName", "role":"result"}
+    - Store [modulo](operation) of [s]{"entity":"variableName", "role":"operand1"} and [k]{"entity":"variableName", "role":"operand2"} in [i]{"entity":"variableName", "role":"result"}
+    - Store [sum](operation) of [t]{"entity":"variableName", "role":"operand1"} and [j]{"entity":"variableName", "role":"operand2"} in [f]{"entity":"variableName", "role":"result"}
+    - Store [difference](operation) of [u]{"entity":"variableName", "role":"operand1"} and [i]{"entity":"variableName", "role":"operand2"} in [g]{"entity":"variableName", "role":"result"}
+    - Store [product](operation) of [v]{"entity":"variableName", "role":"operand1"} and [h]{"entity":"variableName", "role":"operand2"} in [h]{"entity":"variableName", "role":"result"}
+    - Store [division](operation) of [w]{"entity":"variableName", "role":"operand1"} and [g]{"entity":"variableName", "role":"operand2"} in [z]{"entity":"variableName", "role":"result"}
+    - Store [modulo](operation) of [x]{"entity":"variableName", "role":"operand1"} and [f]{"entity":"variableName", "role":"operand2"} in [i]{"entity":"variableName", "role":"result"}
+    - Store [sum](operation) of [y]{"entity":"variableName", "role":"operand1"} and [e]{"entity":"variableName", "role":"operand2"} in [f]{"entity":"variableName", "role":"result"}
+    - Store [difference](operation) of [z]{"entity":"variableName", "role":"operand1"} and [d]{"entity":"variableName", "role":"operand2"} in [g]{"entity":"variableName", "role":"result"}
+    - Store [product](operation) of [a1]{"entity":"variableName", "role":"operand1"} and [c]{"entity":"variableName", "role":"operand2"} in [h]{"entity":"variableName", "role":"result"}
+    - Store [division](operation) of [b1]{"entity":"variableName", "role":"operand1"} and [b]{"entity":"variableName", "role":"operand2"} in [z]{"entity":"variableName", "role":"result"}
+    - Store [modulo](operation) of [c1]{"entity":"variableName", "role":"operand1"} and [a]{"entity":"variableName", "role":"operand2"} in [i]{"entity":"variableName", "role":"result"}
+    
+
+- intent: conditional_statement
+  examples: |
+    - if a less than 10.239 then
+    - else if b less than 2138.23 and y greater than or equal to 100
+    - else
+    - if true
+    - else if true
+    - if false
+    - else if false
+    - if x equal to 100
+    - if p less than 1237 then
+    - else if q less than 2836 and y greater than or equal to 869
+    - if a1 equals 54
+
+- intent: come_out
+  examples: |
+    - come out
+    - come out of the current block
+
+- intent: while_loop
+  examples: |
+    - while true
+    - while a less than 10.239 then
+    - while b less than 2138.23 and y greater than or equal to 100
+    - while false
+    - while x equal to 100
+    - while p less than 1237 then
+    - while q less than 2836 and y greater than or equal to 869
+    - while a1 equals 54
+
+- intent: list_creation
+  examples: |
+    - make a list [l3](variableName) of [10](initialSize) [integers](dataType)
+    - make a list [a](variableName) of [20](initialSize) [characters](dataType)
+    - make a list [b](variableName) of [173](initialSize) [floats](dataType)
+    - make a list [c](variableName) of [83](initialSize) [doubles](dataType)
+    - make a list [d](variableName) of [57](initialSize) [bool](dataType)
+    - make a list [e](variableName) of [34](initialSize) [integers](dataType)
+    - make a list [f](variableName) of [41](initialSize) [characters](dataType)
+    - make a list [g](variableName) of [54](initialSize) [floats](dataType)
+    - make a list [h](variableName) of [69](initialSize) [doubles](dataType)
+    - make a list [i](variableName) of [72](initialSize) [bool](dataType)
+    - make a list [j](variableName) of [810](initialSize) [characters](dataType)
+    - make a list [k](variableName) of [9](initialSize) [floats](dataType)
+    - make a list [l](variableName) of [1](initialSize) [doubles](dataType)
+    - make a list [m](variableName) of [2](initialSize) [bool](dataType)
+    - make a list [n](variableName) of [3](initialSize) [integers](dataType)
+    - make a list [o](variableName) of [4](initialSize) [characters](dataType)
+    - make a list [p](variableName) of [500](initialSize) [floats](dataType)
+    - make a list [q](variableName) of [6](initialSize) [doubles](dataType)
+    - make a list [r](variableName) of [7212](initialSize) [bool](dataType)
+    - make a list [s](variableName) of [20](initialSize) [characters](dataType)
+    - make a list [t](variableName) of [173](initialSize) [floats](dataType)
+    - make a list [u](variableName) of [83](initialSize) [doubles](dataType)
+    - make a list [v](variableName) of [57](initialSize) [bool](dataType)
+    - make a list [w](variableName) of [34](initialSize) [integers](dataType)
+    - make a list [x](variableName) of [41](initialSize) [characters](dataType)
+    - make a list [y](variableName) of [54](initialSize) [floats](dataType)
+    - make a list [z](variableName) of [69](initialSize) [doubles](dataType)
+    - make a list [a1](variableName) of [72](initialSize) [bool](dataType)
+    - make an [integer](dataType) list [a](variableName)
+    - make an [character](dataType) list [b](variableName)
+    - make an [float](dataType) list [c](variableName)
+    - make an [double](dataType) list [d](variableName)
+    - make an [bool](dataType) list [e](variableName)
+    - make an [integer](dataType) list [f](variableName) of size [35](initialSize)
+    - make an [character](dataType) list [g](variableName) of size [487](initialSize)
+    - make an [float](dataType) list [h](variableName) of size [1000](initialSize)
+    - make an [double](dataType) list [i](variableName) of size [981](initialSize)
+    - make an [bool](dataType) list [j](variableName) of size [623](initialSize)
+    - make an [integer](dataType) list [k](variableName)
+    - make an [character](dataType) list [l](variableName)
+    - make an [float](dataType) list [m](variableName)
+    - make an [double](dataType) list [n](variableName)
+    - make an [bool](dataType) list [o](variableName)
+    - make an [integer](dataType) list [p](variableName) of size [1235](initialSize)
+    - make an [character](dataType) list [q](variableName) of size [4287](initialSize)
+    - make an [float](dataType) list [r](variableName) of size [10300](initialSize)
+    - make an [double](dataType) list [s](variableName) of size [9181](initialSize)
+    - make an [bool](dataType) list [t](variableName) of size [6203](initialSize)
+    - make an [integer](dataType) list [u](variableName)
+    - make an [character](dataType) list [v](variableName)
+    - make an [float](dataType) list [w](variableName)
+    - make an [double](dataType) list [x](variableName)
+    - make an [bool](dataType) list [y](variableName)
+    - make an [integer](dataType) list [z](variableName) of size [135](initialSize)
+    - make an [character](dataType) list [a1](variableName) of size [2487](initialSize)
+    - make an [float](dataType) list [b2](variableName) of size [110](initialSize)
+    - make an [double](dataType) list [c7](variableName) of size [991](initialSize)
+    - make an [bool](dataType) list [d1](variableName) of size [667](initialSize)
+
+- intent: input_variable
+  examples: |
+    - input [var](variableName)
+    - take input of [y](variableName)
+    - input [z](variableName)
+    - take input of [a](variableName)
+    - user input [b](variableName)
+    - ask input of [c](variableName)
+    - input [d](variableName)
+    - take input of [e](variableName)
+    - console input [f](variableName)
+    - take user input of [g](variableName)
+    - user input [h](variableName)
+    - ask input of [i](variableName) from the user
+    - input variable [j](variableName)
+    - take input of variable [k](variableName)
+    - input variable [l](variableName)
+    - take input of variable [m](variableName)
+    - user input variable [n](variableName)
+    - ask input of variable [o](variableName)
+    - input variable [p](variableName)
+    - take input of variable [q](variableName)
+    - console input variable [r](variableName)
+    - take user input of [s](variableName) variable
+    - user input [t](variableName) variable
+    - ask input of [u](variableName) variable from the user
+    - input [var](variableName)
+    - take input of [w](variableName)
+    - input [x1](variableName)
+    - take input of [y2](variableName)
+    - user input [z7](variableName)
+
+- intent: hello_world
+  examples: |
+    - world
+    - world hello
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

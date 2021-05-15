@@ -1,0 +1,75 @@
+version: "2.0"
+
+stories:
+
+- story: variable_creation_1_path
+  steps:
+  - intent: variable_creation_1
+  - action: action_variable_creation_1
+
+- story: assignment_operation_path
+  steps:
+  - intent: assignment_operation
+  - action: action_assignment_operation
+
+- story: arithmetic_operation_path
+  steps:
+  - intent: arithmetic_operation
+  - action: action_arithmetic_operation
+
+- story: conditional_statement_path
+  steps:
+  - intent: conditional_statement
+  - action: action_conditional_statement
+
+- story: come_out_path
+  steps:
+  - intent: come_out
+  - action: action_come_out
+
+- story: while_loop_path
+  steps:
+  - intent: while_loop
+  - action: action_while_loop
+
+- story: list_creation_path
+  steps:
+  - intent: list_creation
+  - action: action_list_creation
+
+- story: input_variable_path
+  steps:
+  - intent: input_variable
+  - action: action_input_variable
+
+- story: hello_world_path
+  steps:
+  - intent: hello_world
+  - action: action_hello_world
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

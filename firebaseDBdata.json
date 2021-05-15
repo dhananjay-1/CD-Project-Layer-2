@@ -1,0 +1,8 @@
+{
+    "cppCodeOutput":{
+        "cppCodeHeader" : "#include<bits/stdc++.h>\nusing namespace std;\nint main(){\n",
+        "cppCodeFooter" : "\nreturn 0;\n}",
+        "cppCodeBody" : "",
+        "nestedBlocksCounter" : 0
+    }
+}

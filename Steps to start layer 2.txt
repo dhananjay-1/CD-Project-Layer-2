@@ -1,0 +1,15 @@
+1. Go to this directory:-
+cd documents/dtu 6th sem/compiler design/cd project layer 2 - rasa nlu
+
+2. Activate the rasa environment - i had created environment named "installingRasa" with python==3.7.6 and tensorflow, etc things when i installed rasa
+conda activate installingRasa
+
+3. Train the rasa model:-
+rasa train
+
+4. Test the rasa model:-
+rasa shell
+
+5. Open another anaconda prompt window and do step 1 and 2 again and then run:-
+rasa run actions
+
