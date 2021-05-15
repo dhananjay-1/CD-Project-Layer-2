@@ -101,7 +101,7 @@ def sendResToNextLayer(res):
     s += "\n"+"end"
    
     ## Shell=False helps the process terminate
-    path = "C:/Users/Dhananjay Deswal/Documents/DTU 6th Sem/Compiler Design/CD Project Layer 3/bin/Debug/CD Project Layer 3.exe"
+    path = "./layer3"
     process = subprocess.Popen(path, shell=False, encoding='utf8', stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     ## Get exit codes
     out, err = process.communicate(s)
