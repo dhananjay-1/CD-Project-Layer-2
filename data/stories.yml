@@ -42,6 +42,16 @@ stories:
   - intent: input_variable
   - action: action_input_variable
 
+- story: arithmetic_operation_2_path
+  steps:
+  - intent: arithmetic_operation_2
+  - action: action_arithmetic_operation_2
+
+- story: give_output_path
+  steps:
+  - intent: give_output
+  - action: action_give_output
+
 - story: hello_world_path
   steps:
   - intent: hello_world

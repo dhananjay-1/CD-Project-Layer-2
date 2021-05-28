@@ -72,6 +72,25 @@ def showCppCode(obj):
     op = obj["cppCodeHeader"] + obj["cppCodeBody"] + inBlock + obj["cppCodeFooter"]
     print(op)
 
+def rectifyDataType(dataType):
+    if(dataType=="integer"):
+        return "int"
+    if(dataType=="character"):
+        return "char"
+    if(dataType=="boolean"):
+        return "bool"
+    
+def rectifyOperation(op):
+    if op=="sum" or op=="add":
+        return "+"
+    if op=="difference" or op=="minus" or op=="subtract":
+        return "-"
+    if op=="product" or op=="into" or op=="multiply":
+        return "*"
+    if op=="division" or op=="by" or "divide":
+        return "/"
+    if op=="modulo":
+        return "%"
 
 def prepareRes(codeNo, arr, useRoles=False):
     res = {"codeNo":codeNo}
@@ -81,6 +100,12 @@ def prepareRes(codeNo, arr, useRoles=False):
             entity = obj['role']
 
         value = obj['value']
+
+        if entity=="dataType":
+            value = rectifyDataType(value)
+        elif entity=="operation":
+            value = rectifyOperation(value)
+
         res[entity] = value
 
     return res
@@ -205,6 +230,15 @@ class ActionConditionalStatement(Action):
         print("user message : ", userMsg)
 
         userMsg = userMsg.split()
+
+        for i in range(len(userMsg)):
+            if(userMsg[i]=="greater"):
+                userMsg[i] = ">"
+                userMsg[i+1] = ""
+            elif(userMsg[i]=="less"):
+                userMsg[i] = "<"
+                userMsg[i+1] = ""
+
         conditionalKeyword = ""
         expression = ""
 
@@ -278,6 +312,39 @@ class ActionWhileLoop(Action):
         print("user message : ", userMsg)
 
         userMsg = userMsg.split()
+
+        for i in range(len(userMsg)):
+            if(userMsg[i]=="greater"):
+                userMsg[i] = ">"
+                userMsg[i+1] = ""
+            elif(userMsg[i]=="less"):
+                userMsg[i] = "<"
+                userMsg[i+1] = ""
+            elif userMsg[i]=="zero":
+                userMsg[i] = "0"
+            elif userMsg[i]=="one":
+                userMsg[i] = "1"
+            elif userMsg[i]=="two":
+                userMsg[i] = "2"
+            elif userMsg[i]=="three":
+                userMsg[i] = "3"
+            elif userMsg[i]=="four":
+                userMsg[i] = "4"
+            elif userMsg[i]=="five":
+                userMsg[i] = "5"
+            elif userMsg[i]=="six":
+                userMsg[i] = "6"
+            elif userMsg[i]=="seven":
+                userMsg[i] = "7"
+            elif userMsg[i]=="eight":
+                userMsg[i] = "8"
+            elif userMsg[i]=="nine":
+                userMsg[i] = "9"
+            elif userMsg[i]=="ten":
+                userMsg[i] = "10"
+            elif userMsg[i]=="eleven":
+                userMsg[i] = "11"
+
         expression = ' '.join(userMsg[1:])
 
         res = {"codeNo":5}
@@ -327,6 +394,50 @@ class ActionInputVariable(Action):
         print("user message : ", userMsg)
 
         res = prepareRes(7, arr)
+        sendResToNextLayer(res)
+
+        txt = tracker.latest_message['intent']['name']
+        dispatcher.utter_message(text=txt)
+
+        return []
+
+class ActionArithmeticOperation2(Action):
+
+    def name(self) -> Text:
+        return "action_arithmetic_operation_2"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        arr = tracker.latest_message['entities']
+        userMsg = tracker.latest_message['text']
+
+        print("user message : ", userMsg)
+
+        res = prepareRes(8, arr)
+        sendResToNextLayer(res)
+
+        txt = tracker.latest_message['intent']['name']
+        dispatcher.utter_message(text=txt)
+
+        return []
+
+class ActionGiveOutput(Action):
+
+    def name(self) -> Text:
+        return "action_give_output"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        arr = tracker.latest_message['entities']
+        userMsg = tracker.latest_message['text']
+
+        print("user message : ", userMsg)
+
+        res = prepareRes(9, arr)
         sendResToNextLayer(res)
 
         txt = tracker.latest_message['intent']['name']

@@ -9,6 +9,8 @@ intents:
   - while_loop
   - list_creation
   - input_variable
+  - arithmetic_operation_2
+  - give_output
   - hello_world
   - greet
   - goodbye
@@ -28,6 +30,8 @@ actions:
   - action_list_creation
   - action_input_variable
   - action_hello_world
+  - action_arithmetic_operation_2
+  - action_give_output
 
 entities:
   - dataType
